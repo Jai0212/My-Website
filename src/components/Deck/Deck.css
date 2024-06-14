@@ -17,9 +17,9 @@
 .card-center {
   position: relative;
   width: 45vh;
-  max-width: 350px;
+  max-width: 270px;
   height: 80vh;
-  max-height: 600px;
+  max-height: 550px;
   will-change: transform;
   border-radius: 15px;
   box-shadow: 0 12.5px 100px -10px rgba(0, 0, 0, 0.2), 0 10px 10px -10px rgba(0, 0, 0, 0.1);

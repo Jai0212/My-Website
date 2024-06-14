@@ -202,11 +202,11 @@ const App = () => {
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
       const offsetX = 50;
-      const offsetY = -60;
+      const offsetY = -10;
 
       const top_left = { x: -screenWidth / 2 + offsetX, y: -screenHeight / 2 + offsetY }
-      const top_right = { x: top_left.x + 1100, y: top_left.y }
-      const bottom_left = { x: top_left.x, y: top_left.y + 700 }
+      const top_right = { x: top_left.x + 1000, y: top_left.y }
+      const bottom_left = { x: top_left.x, y: top_left.y + 600 }
       const bottom_right = { x: top_right.x, y: bottom_left.y }
 
       switch (id) {
