@@ -197,7 +197,7 @@ const App = () => {
   const [zIndex, setZIndex] = useState(1);
   const [cardOnTop, setCardOnTop] = useState([]);
   const [items, setItems] = useState([]);
-  
+
   const isMax = useMediaQuery({ query: '(max-width: 1400px)' });
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1254px)' });
   const isBetween = useMediaQuery({ query: '(max-width: 1100px)' });
@@ -237,9 +237,6 @@ const App = () => {
     center_x = 360;
     center_y = -300;
   }
-
-  console.log(center_x, center_y);
-  console.log("First")
 
   React.useEffect(() => {
     const calculatePosition = (id) => {
