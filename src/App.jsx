@@ -99,7 +99,7 @@ const itemsData = [
     - Conducted comparative research and case study on AWS, Azure, and GCP
     - Resolved cyber threats targeting a large supermarket chain's database as part of the cybersecurity team`,
     image: assets.intertec_logo,
-    styles: { width: '100px', borderRadius: '10px', border: '4px solid #ffc966' }
+    styles: { width: '100px', borderRadius: '10px', border: '4px solid #ffc966', marginBottom: '-2px'}
   },
   {
     id: 'internships',
@@ -206,7 +206,7 @@ const App = () => {
 
       const top_left = { x: -screenWidth / 2 + offsetX, y: -screenHeight / 2 + offsetY }
       const top_right = { x: top_left.x + 1000, y: top_left.y }
-      const bottom_left = { x: top_left.x, y: top_left.y + 600 }
+      const bottom_left = { x: top_left.x, y: top_left.y + 500 }
       const bottom_right = { x: top_right.x, y: bottom_left.y }
 
       switch (id) {
