@@ -131,14 +131,14 @@ const itemsData = [
     title: '2nd Year at UofT',
     description: 'Computer Science Speicalist\nStats & Math Minor\n\nGPA: 3.93',
     image: assets.uoft_logo,
-    styles: { width: '400px', marginTop: '-100px', marginBottom: '-30px' }
+    styles: { width: '300px', marginTop: '-100px', marginBottom: '-30px' }
   },
   {
     id: 'aboutMe',
     title: 'Jai Joshi',
     description: 'About Me',
     image: assets.jj_pic,
-    styles: { width: '250px', height: '400px', borderRadius: '5px', border: '4px solid #004080' }
+    styles: { width: '220px', height: '370px', borderRadius: '5px', border: '4px solid #004080' }
   },
   {
     id: 'tools',
@@ -158,7 +158,7 @@ const itemsData = [
     - Gained proficiency in programming languages such as C, Python, JavaScript and web-development.
     - Problem-solving skills and algorithmic thinking for tackling complex coding challenges`,
     image: assets.harvard,
-    styles: { width: '300px', marginBottom: '40px' }
+    styles: { width: '230px', marginBottom: '40px' }
   },
   {
     id: 'tools',

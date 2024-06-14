@@ -84,7 +84,7 @@ const DeckProject = ({
           setZIndex((prevZIndex) => prevZIndex + 1);
           items[i].centered = true;
           items[i].z = zIndex;
-          return { x: CENTER_X, y: CENTER_Y, rot: -10 + Math.random() * 20, scale: 1.2, config: { friction: 50, tension: 800 }, delay: 0 };
+          return { x: CENTER_X, y: CENTER_Y, rot: -10 + Math.random() * 20, scale: 1.25, config: { friction: 50, tension: 800 }, delay: 0 };
         }
       }
       return props[i];
