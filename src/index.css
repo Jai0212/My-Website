@@ -59,6 +59,12 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
 }
 
+@media (max-width: 1600px) {
+    .header {
+        left: 45%;
+    }
+}
+
 @media (max-width: 1400px) {
     body,
     html {

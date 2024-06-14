@@ -197,7 +197,8 @@ const App = () => {
   const [zIndex, setZIndex] = useState(1);
   const [cardOnTop, setCardOnTop] = useState([]);
   const [items, setItems] = useState([]);
-
+  
+  const isMaxMax = useMediaQuery({ query: '(max-width: 1600px)' });
   const isMax = useMediaQuery({ query: '(max-width: 1400px)' });
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1254px)' });
   const isBetween = useMediaQuery({ query: '(max-width: 1100px)' });
@@ -210,13 +211,18 @@ const App = () => {
   let center_x = isMobile ? 180 : isTabletOrMobile ? -50 : -150;
   let center_y = isMobile ? -370 : isTabletOrMobile ? -380 : -330;
 
+  if (isMaxMax && !isMax) {
+    center_x = -230;
+    center_y = -500;
+  }
+
   if (isMax && !isTabletOrMobile) {
     center_x = -50;
   }
 
   if (isBetween && !isMobile) {
     center_x = 50;
-    center_y = -500;
+    center_y = -350;
   }
 
   if (isBeforeAfterBetween && !isAfterBetween) {
