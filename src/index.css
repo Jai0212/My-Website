@@ -59,34 +59,55 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
 }
 
-@media (max-width: 1254px) {
-
+@media (max-width: 1400px) {
     body,
     html {
         overflow: auto;
     }
 
     .header {
-        left: 59%;
+        left: 56%;
     }
 }
 
-@media (max-width: 1024px) {
-
-    body,
-    html {
-        overflow: auto;
+@media (max-width: 1254px) {
+    .header {
+        left: 58%;
     }
+}
 
+@media (max-width: 1200px) {
+    .header {
+        left: 63%;
+    }
+}
+
+@media (max-width: 1100px) {
     .header {
         left: 68%;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .header {
+        left: 85%;
+    }
+}
 
-    body,
-    html {
-        overflow: auto;
+@media (max-width: 850px) {
+    .header {
+        left: 90%;
+    }
+}
+
+@media (max-width: 769px) {
+    .header {
+        left: 95%;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        left: 180%;
     }
 }

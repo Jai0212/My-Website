@@ -3,6 +3,7 @@ import './index.css';
 import Deck from './components/Deck/Deck';
 import { useState } from 'react';
 import { assets } from './assets/assets.js';
+import { useMediaQuery } from 'react-responsive';
 
 const itemsData = [
   {
@@ -197,6 +198,46 @@ const App = () => {
   const [cardOnTop, setCardOnTop] = useState([]);
   const [items, setItems] = useState([]);
 
+  const isMax = useMediaQuery({ query: '(max-width: 1400px)' });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1254px)' });
+  const isBetween = useMediaQuery({ query: '(max-width: 1100px)' });
+  const isBeforeAfterBetween = useMediaQuery({ query: '(max-width: 1025px)' });
+  const isAfterBetween = useMediaQuery({ query: '(max-width: 900px)' });
+  const isIPad = useMediaQuery({ query: '(max-width: 850px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 769px)' });
+  const isSmallMobile = useMediaQuery({ query: '(max-width: 500px)' });
+
+  let center_x = isMobile ? 180 : isTabletOrMobile ? -50 : -150;
+  let center_y = isMobile ? -370 : isTabletOrMobile ? -380 : -330;
+
+  if (isMax && !isTabletOrMobile) {
+    center_x = -50;
+  }
+
+  if (isBetween && !isMobile) {
+    center_x = 50;
+    center_y = -500;
+  }
+
+  if (isBeforeAfterBetween && !isAfterBetween) {
+    center_y = -250;
+  }
+
+  if (isAfterBetween && !isIPad) {
+    center_x = 150;
+    center_y = -500;
+  }
+
+  if (isIPad && !isMobile) {
+    center_x = 150;
+    center_y = -450;
+  }
+
+  if (isSmallMobile) {
+    center_x = 360;
+    center_y = -300;
+  }
+
   React.useEffect(() => {
     const calculatePosition = (id) => {
       const screenWidth = window.innerWidth;
@@ -247,8 +288,8 @@ const App = () => {
             setZIndex={setZIndex}
             cardOnTop={cardOnTop}
             setCardOnTop={setCardOnTop}
-            CENTER_X={-150}
-            CENTER_Y={-330}
+            CENTER_X={center_x}
+            CENTER_Y={center_y}
             className="cards"
           />
         ))}
