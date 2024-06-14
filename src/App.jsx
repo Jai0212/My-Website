@@ -94,7 +94,7 @@ const itemsData = [
   {
     id: 'internships',
     title: 'Cloud & Cybersecurity Intern',
-    display: 'Intertec\nJul 21 - Aug 21\nDubai',
+    display: 'Intertec\nJul 22 - Aug 22\nDubai',
     description: `
     - Researched SaaS backup needs for Office 365 and Google Suite, evaluating available backup options
     - Conducted comparative research and case study on AWS, Azure, and GCP
