@@ -248,7 +248,7 @@ const App = () => {
             cardOnTop={cardOnTop}
             setCardOnTop={setCardOnTop}
             CENTER_X={-170}
-            CENTER_Y={-470}
+            CENTER_Y={-410}
             className="cards"
           />
         ))}
