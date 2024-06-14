@@ -118,10 +118,10 @@ const DeckProject = ({
           }}>
           <div>
             <a href={items[i].link} target="_blank" rel="noopener noreferrer" className={items[i].centered ? '' : 'disabled'}>
-              {items[i].id === 'projects' ? (
-                <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '-0.5px' }} />
+              {items[i].id === 'projects' && items[i].centered ? (
+                <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '-0.3px' }} />
               ) : (
-                <></>
+                items[i].id === 'projects' ? <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '2px' }} /> : <></>
               )}
             </a>
             {items[i].image !== '' ? <img src={items[i].image} alt="" style={items[i].styles} /> : <></>}
