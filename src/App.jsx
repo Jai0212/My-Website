@@ -202,7 +202,7 @@ const App = () => {
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
       const offsetX = 50;
-      const offsetY = -10;
+      const offsetY = -150;
 
       const top_left = { x: -screenWidth / 2 + offsetX, y: -screenHeight / 2 + offsetY }
       const top_right = { x: top_left.x + 1000, y: top_left.y }
