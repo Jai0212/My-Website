@@ -99,7 +99,7 @@ const itemsData = [
     - Conducted comparative research and case study on AWS, Azure, and GCP
     - Resolved cyber threats targeting a large supermarket chain's database as part of the cybersecurity team`,
     image: assets.intertec_logo,
-    styles: { width: '100px', borderRadius: '10px', border: '3px solid #ffc966', marginBottom: '-1px'}
+    styles: { width: '100px', borderRadius: '10px', border: '3px solid #ffc966', marginBottom: '-1px' }
   },
   {
     id: 'internships',
@@ -196,6 +196,7 @@ const App = () => {
   const [zIndex, setZIndex] = useState(1);
   const [cardOnTop, setCardOnTop] = useState([]);
   const [items, setItems] = useState([]);
+  const [headerPosition, setHeaderPosition] = useState({ top: 0, left: 0 }); // Initialize header position
 
   React.useEffect(() => {
     const calculatePosition = (id) => {
@@ -229,11 +230,18 @@ const App = () => {
     }));
 
     setItems(updatedItems);
+
+    const headerCoordsLeftTop = calculatePosition('projects');
+    const headerCoordsRightBottom = calculatePosition('tools');
+
+    const headerLeft = (headerCoordsLeftTop.x + headerCoordsRightBottom.x) / 2;
+    const headerTop = (headerCoordsLeftTop.y + headerCoordsRightBottom.y) / 2;
+    setHeaderPosition({ left: headerLeft, top: headerTop });
   }, []);
 
   return (
     <div className="app">
-      <div className='header-div'>
+      <div className='header-div' style={{ position: 'absolute', left: headerPosition.left, top: headerPosition.top }}>
         <h1 className="header">Jai Joshi</h1>
       </div>
       <div className="container">
