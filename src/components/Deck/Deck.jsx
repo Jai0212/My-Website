@@ -121,7 +121,7 @@ const DeckProject = ({
               {items[i].id === 'projects' && items[i].centered ? (
                 <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '-0.2px' }} />
               ) : (
-                items[i].id === 'projects' ? <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '6px' }} /> : <></>
+                items[i].id === 'projects' ? <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '10px' }} /> : <></>
               )}
             </a>
             {items[i].image !== '' ? <img src={items[i].image} alt="" style={items[i].styles} /> : <></>}
