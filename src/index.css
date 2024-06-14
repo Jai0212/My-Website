@@ -59,6 +59,16 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
 }
 
+@media (max-width: 1024px) {
+    body, html {
+        overflow: auto;
+    }
+
+    .header {
+        left: 68%;
+    }
+}
+
 @media (max-width: 768px) {
     body, html {
         overflow: auto;
