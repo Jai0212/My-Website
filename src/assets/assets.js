@@ -40,6 +40,8 @@ import vite from './vite.png';
 import langchain from './langchain.png';
 import stripe from './stripe.png';
 
+import card_sound from './card_sound.m4a';
+
 export const assets = {
     github_logo,
     eand_logo,
@@ -81,5 +83,6 @@ export const assets = {
     opengl,
     vite,
     langchain,
-    stripe
+    stripe,
+    card_sound
 }

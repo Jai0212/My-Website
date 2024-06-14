@@ -131,7 +131,7 @@ const itemsData = [
     title: '2nd Year at UofT',
     description: 'Computer Science Speicalist\nStats & Math Minor\n\nGPA: 3.93',
     image: assets.uoft_logo,
-    styles: { width: '300px', marginTop: '-100px', marginBottom: '-30px' }
+    styles: { width: '280px', marginTop: '-100px', marginBottom: '-30px' }
   },
   {
     id: 'aboutMe',
