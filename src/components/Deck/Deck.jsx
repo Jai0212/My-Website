@@ -60,6 +60,11 @@ const DeckProject = ({
     assets.opengl,
   ];
 
+  const playSound = () => {
+    const audio = new Audio(assets.card_sound);
+    audio.play();
+  }
+
   const to = (i, length) => ({
     x: items[i].centered ? CENTER_X : items[i].x,
     y: items[i].centered ? CENTER_Y : items[i].y,
@@ -76,14 +81,16 @@ const DeckProject = ({
           setCardOnTop((prevState) => prevState.slice(0, -1));
           items[i].z = 1;
           items[i].centered = false;
+          playSound();
           return { x: items[i].x, y: items[i].y, rot: -10 + Math.random() * 20, scale: 1, config: { friction: 50, tension: 800 }, delay: 0 };
         }
         if (!items[i].centered) {
           const newCard = { cardItself: items[i], index: index };
           setCardOnTop((prevState) => [...prevState, newCard]);
           setZIndex((prevZIndex) => prevZIndex + 1);
-          items[i].centered = true;
           items[i].z = zIndex;
+          items[i].centered = true;
+          playSound();
           return { x: CENTER_X, y: CENTER_Y, rot: -10 + Math.random() * 20, scale: 1.3, config: { friction: 50, tension: 800 }, delay: 0 };
         }
       }
@@ -119,7 +126,7 @@ const DeckProject = ({
             </a>
             {items[i].image !== '' ? <img src={items[i].image} alt="" style={items[i].styles} /> : <></>}
             <h2>{items[i].title}</h2>
-            {items[i].id === "internships" || items[i].id === "projects" ? <p dangerouslySetInnerHTML={{ __html: items[i].display.replace(/\n/g, '<br>') }} style={{ fontStyle: 'italic' }} /> : <></>}
+            {items[i].id === "internships" || items[i].id === "projects" ? <p dangerouslySetInnerHTML={{ __html: items[i].display.replace(/\n/g, '<br>') }} style={{ fontStyle: 'italic', marginBottom: '-10px' }} /> : <></>}
             {items[i].id === "tools" || items[i].id === "aboutMe" || (items[i].id === "projects" && items[i].centered) || (items[i].id === "internships" && items[i].centered) ?
               <p dangerouslySetInnerHTML={{ __html: items[i].description.replace(/\n/g, '<br>') }} /> : <></>}
             {items[i].title === 'My Links' ?

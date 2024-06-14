@@ -247,7 +247,7 @@ const App = () => {
             setZIndex={setZIndex}
             cardOnTop={cardOnTop}
             setCardOnTop={setCardOnTop}
-            CENTER_X={-170}
+            CENTER_X={-150}
             CENTER_Y={-370}
             className="cards"
           />
