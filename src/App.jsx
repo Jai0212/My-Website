@@ -201,7 +201,7 @@ const App = () => {
     const calculatePosition = (id) => {
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      const offsetX = 70;
+      const offsetX = 80;
       const offsetY = -150;
 
       const top_left = { x: -screenWidth / 2 + offsetX, y: -screenHeight / 2 + offsetY }
@@ -248,7 +248,7 @@ const App = () => {
             cardOnTop={cardOnTop}
             setCardOnTop={setCardOnTop}
             CENTER_X={-170}
-            CENTER_Y={-410}
+            CENTER_Y={-370}
             className="cards"
           />
         ))}
