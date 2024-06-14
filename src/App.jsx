@@ -201,11 +201,11 @@ const App = () => {
     const calculatePosition = (id) => {
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      const offsetX = 140;
+      const offsetX = 160;
       const offsetY = -150;
 
       const top_left = { x: -screenWidth / 2 + offsetX, y: -screenHeight / 2 + offsetY }
-      const top_right = { x: top_left.x + 870, y: top_left.y }
+      const top_right = { x: top_left.x + 860, y: top_left.y }
       const bottom_left = { x: top_left.x, y: top_left.y + 510 }
       const bottom_right = { x: top_right.x, y: bottom_left.y }
 
