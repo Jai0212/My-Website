@@ -1,5 +1,5 @@
 import github_logo from './github_logo.png';
-import eand_logo from './eand_logo.png';
+import eand_logo from './eand_logo.jpeg';
 import intertec_logo from './intertec_logo.jpeg';
 import jj_pic from './jj_pic.JPG';
 import uoft_logo from './uoft_logo.png';

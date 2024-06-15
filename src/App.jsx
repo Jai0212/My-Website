@@ -100,7 +100,7 @@ const itemsData = [
     - Conducted comparative research and case study on AWS, Azure, and GCP
     - Resolved cyber threats targeting a large supermarket chain's database as part of the cybersecurity team`,
     image: assets.intertec_logo,
-    styles: { width: '100px', borderRadius: '10px', border: '3px solid #ffc966', marginBottom: '-1px' }
+    styles: { width: '100px', borderRadius: '10px', border: '3px solid #ffc966', marginBottom: '-0.1px' }
   },
   {
     id: 'internships',
@@ -111,7 +111,7 @@ const itemsData = [
     - Implemented using LangChain and ChromaDB
     - Utilized Ollama embedding functions to enable the LLM to retrieve relevant tax information with a frontend built using React, TypeScript, Python and Flask`,
     image: assets.eand_logo,
-    styles: { width: '180px' }
+    styles: { width: '170px', borderRadius: '10px', border: '3px solid red' }
   },
   {
     id: 'aboutMe',
