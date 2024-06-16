@@ -260,7 +260,7 @@ const App = () => {
         case 'tools':
           return { x: bottom_right.x, y: bottom_right.y, z: 1, centered: false }; // Bottom-right
         default:
-          return { x: 0, y: 0, z: 1, centered: false };
+          return { x: center_x, y: center_y, z: 0.5, centered: true };
       }
     };
 

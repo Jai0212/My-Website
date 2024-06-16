@@ -97,6 +97,10 @@
   color: black;
 }
 
+.card-center.center {
+  background-color: white;
+}
+
 .description,
 .title {
   color: black;

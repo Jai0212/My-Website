@@ -40,6 +40,7 @@ import vite from './vite.png';
 import langchain from './langchain.png';
 import stripe from './stripe.png';
 import name_text from './name_text.png';
+import name_text_black from './name_text_black.png';
 import card_sound from './card_sound.m4a';
 
 export const assets = {
@@ -85,5 +86,6 @@ export const assets = {
     langchain,
     stripe,
     name_text,
+    name_text_black,
     card_sound
 }
