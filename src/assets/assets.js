@@ -39,7 +39,7 @@ import numpy from './numpy.png';
 import vite from './vite.png';
 import langchain from './langchain.png';
 import stripe from './stripe.png';
-
+import name_text from './name_text.png';
 import card_sound from './card_sound.m4a';
 
 export const assets = {
@@ -84,5 +84,6 @@ export const assets = {
     vite,
     langchain,
     stripe,
+    name_text,
     card_sound
 }

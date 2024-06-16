@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -33,6 +35,7 @@ body {
     position: relative;
 }
 
+
 .header {
     font-size: 55px;
     position: absolute;
@@ -41,14 +44,16 @@ body {
     transform: translate(-50%, -50%);
     margin: 0;
     color: #ffffff;
-    background: linear-gradient(135deg, #DC143C, #FF4500);
+    background: linear-gradient(135deg, #DC143C, #E04E3D);
     border: 6px solid #ffffff;
     padding: 15px 35px;
+    padding-top: 25px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 50px red;
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    font-family: 'Arial', sans-serif;
+    /* font-family: 'Arial', sans-serif; */
+    font-family: 'Special Elite', system-ui;
     font-weight: bold;
     letter-spacing: 2px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -58,6 +63,17 @@ body {
     transform: translate(-50%, -50%) scale(1.05);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
 }
+
+/* .header-div {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-div img {
+    width: 320px;
+} */
 
 /* @media (max-width: 1600px) {
     .header {

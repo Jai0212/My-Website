@@ -276,6 +276,7 @@ const App = () => {
     <div className="app">
       <div className='header-div'>
         <h1 className="header">Jai Joshi</h1>
+        {/* <img src={assets.name_text} alt=""/> */}
       </div>
       <div className="container">
         {items.map((item, index) => (
