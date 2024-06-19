@@ -2,7 +2,6 @@ import github_logo from './github_logo_new.png';
 import eand_logo from './eand_logo.jpeg';
 import intertec_logo from './intertec_logo.jpeg';
 import jj_pic from './jj_pic.JPG';
-import uoft_logo_old from './uoft_logo.png';
 import email_logo from './email_logo.png';
 import linkedin_logo from './linkedin_logo.png';
 import harvard from './harvard.png';
