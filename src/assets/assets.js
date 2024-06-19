@@ -1,8 +1,8 @@
-import github_logo from './github_logo.png';
+import github_logo from './github_logo_new.png';
 import eand_logo from './eand_logo.jpeg';
 import intertec_logo from './intertec_logo.jpeg';
 import jj_pic from './jj_pic.JPG';
-import uoft_logo from './uoft_logo.png';
+import uoft_logo_old from './uoft_logo.png';
 import email_logo from './email_logo.png';
 import linkedin_logo from './linkedin_logo.png';
 import harvard from './harvard.png';
@@ -42,6 +42,8 @@ import stripe from './stripe.png';
 import name_text from './name_text.png';
 import name_text_black from './name_text_black.png';
 import card_sound from './card_sound.m4a';
+import uoft_logo from './uoft_logo.jpg'
+import background from './background.jpeg';
 
 export const assets = {
     github_logo,
@@ -87,5 +89,6 @@ export const assets = {
     stripe,
     name_text,
     name_text_black,
-    card_sound
+    card_sound,
+    background
 }

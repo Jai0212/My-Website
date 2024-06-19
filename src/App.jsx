@@ -100,7 +100,7 @@ const itemsData = [
     - Conducted comparative research and case study on AWS, Azure, and GCP
     - Resolved cyber threats targeting a large supermarket chain's database as part of the cybersecurity team`,
     image: assets.intertec_logo,
-    styles: { width: '100px', borderRadius: '10px', border: '3px solid #ffc966', marginBottom: '-0.1px' }
+    styles: { width: '100px', borderRadius: '10px', border: '3px solid red', marginBottom: '-0.01px' }
   },
   {
     id: 'internships',
@@ -132,14 +132,14 @@ const itemsData = [
     title: '2nd Year at UofT',
     description: 'Computer Science Speicalist\nStats & Math Minor\n\nGPA: 3.93',
     image: assets.uoft_logo,
-    styles: { width: '280px', marginTop: '-100px', marginBottom: '-30px' }
+    styles: { width: '210px', marginTop: '-100px', marginBottom: '30px', backgroundColor: 'white', border: '4px solid #004080', borderRadius: '10px', boxShadow: '0px 0px 25px 0px #004080' }
   },
   {
     id: 'aboutMe',
     title: 'Jai Joshi',
     description: 'About Me',
     image: assets.jj_pic,
-    styles: { width: '220px', height: '370px', borderRadius: '5px', border: '4px solid #004080' }
+    styles: { width: '220px', height: '370px', borderRadius: '10px', border: '4px solid #004080', boxShadow: '0px 0px 30px 0px #004080' }
   },
   {
     id: 'tools',
@@ -159,7 +159,7 @@ const itemsData = [
     - Gained proficiency in programming languages such as C, Python, JavaScript and web-development.
     - Problem-solving skills and algorithmic thinking for tackling complex coding challenges`,
     image: assets.harvard,
-    styles: { width: '230px', marginBottom: '40px' }
+    styles: { width: '230px', marginBottom: '40px', backgroundColor: 'white', borderRadius: '10px', border: '4px solid #004080', boxShadow: '0px 0px 20px 0px #004080' }
   },
   {
     id: 'tools',

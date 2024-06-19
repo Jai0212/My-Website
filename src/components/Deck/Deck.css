@@ -48,7 +48,6 @@
 
 .card-project h2,
 .card-center h2 {
-  color: black;
   margin: 0;
   font-size: 22px;
   font-weight: bold;
@@ -58,17 +57,9 @@
 
 .card-project p,
 .card-center p {
-  color: black;
   margin-top: 10px;
   font-size: 14px;
   line-height: 1.4;
-}
-
-.card-project.projects,
-.card-center.projects {
-  background-color: #ffd700;
-  background: linear-gradient(to bottom, #ffd700, #cc9a00);
-  color: black;
 }
 
 .card-project.projects img,
@@ -76,11 +67,20 @@
   width: 20%;
 }
 
+/* .card-project.projects,
+.card-center.projects {
+  background-color: #ffd700;
+  background: linear-gradient(to bottom, #ffd700, #cc9a00);
+  color: black;
+  box-shadow: 0 0 6px 4px rgba(255, 255, 0, 0.3);
+}
+
 .card-project.internships,
 .card-center.internships {
   background-color: #ffa500;
   background: linear-gradient(to bottom right, #ffa500, #ff6600);
   color: black;
+  box-shadow: 0 0 6px 4px rgba(255, 165, 0, 0.5);
 }
 
 .card-project.aboutMe,
@@ -88,6 +88,7 @@
   background-color: #00bfff;
   background: linear-gradient(to bottom right, #00bfff, #0077b3);
   color: black;
+  box-shadow: 0 0 6px 4px rgba(0, 191, 255, 0.5);
 }
 
 .card-project.tools,
@@ -95,21 +96,92 @@
   background-color: #7fff00;
   background: linear-gradient(to bottom right, #7fff00, #4b9500);
   color: black;
+  box-shadow: 0 0 6px 4px rgba(127, 255, 0, 0.5);
+} */
+
+.card-project.projects,
+.card-center.projects {
+  background-color: #004d40;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(127, 255, 0, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-project.projects:hover,
+.card-center.projects:hover {
+  box-shadow: 0 0 20px rgba(127, 255, 0, 0.9);
+  /* Brighten shadow on hover */
+}
+
+.card-project.internships,
+.card-center.internships {
+  background-color: #4a0e03;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 77, 77, 0.9);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-project.internships:hover,
+.card-center.internships:hover {
+  box-shadow: 0 0 20px rgba(255, 77, 77, 0.9);
+  /* Brighten shadow on hover */
+}
+
+.card-project.aboutMe,
+.card-center.aboutMe {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-project.aboutMe:hover,
+.card-center.aboutMe:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  /* Brighten shadow on hover */
+}
+
+.card-project.tools,
+.card-center.tools {
+  background-color: #1a2c37;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(74, 175, 204, 0.7);
+  /* Light blue glow effect */
+  transition: box-shadow 0.3s ease;
+}
+
+.card-project.tools:hover,
+.card-center.tools:hover {
+  box-shadow: 0 0 20px rgba(74, 175, 204, 0.9);
+  /* Brighten shadow on hover */
+}
+
+
+/* .card-project:hover,
+.card-center:hover {
+  box-shadow: 0 12.5px 100px -10px rgba(0, 0, 0, 0.6), 0 10px 10px -10px rgba(0, 0, 0, 0.2);
+} */
+
+.github_logo {
+  /* box-shadow: 0 0 20px #ffff00; */
+  filter: drop-shadow(0 0 6px rgba(255, 255, 0, 0.7));
+  /* border: 2px red solid; */
+}
+
+.github_logo_aboutMe {
+  border-radius: 50%;
+  /* filter: drop-shadow(0 0 5px #ffffff); */
 }
 
 .card-center.center {
   background-color: white;
 }
 
-.description,
+/* .description,
 .title {
   color: black;
-}
+} */
 
-.card-project:hover,
-.card-center:hover {
-  box-shadow: 0 12.5px 100px -10px rgba(0, 0, 0, 0.6), 0 10px 10px -10px rgba(0, 0, 0, 0.2);
-}
 
 .disabled {
   pointer-events: none;

@@ -72,7 +72,11 @@ const DeckProject = ({
     rot: -10 + Math.random() * 20
   })
 
-  const [props, set] = useSprings(items.length, (i) => ({ ...to(i, items.length), from: from(i) }))
+  const [props, set] = useSprings(items.length, (i) => ({
+    ...to(i, items.length),
+    from: from(i),
+    config: { tension: 75, friction: 12 } // animation speed
+  }));
 
   const moveCard = (index) => {
     set((i) => {
@@ -82,7 +86,7 @@ const DeckProject = ({
           items[i].z = 1;
           items[i].centered = false;
           playSound();
-          return { x: items[i].x, y: items[i].y, rot: -10 + Math.random() * 20, scale: 1, config: { friction: 50, tension: 800 }, delay: 0 };
+          return { x: items[i].x, y: items[i].y, rot: -10 + Math.random() * 20, scale: 1, config: { friction: 50, tension: 450 }, delay: 0 };
         }
         if (!items[i].centered) {
           const newCard = { cardItself: items[i], index: index };
@@ -91,7 +95,7 @@ const DeckProject = ({
           items[i].z = zIndex;
           items[i].centered = true;
           playSound();
-          return { x: CENTER_X, y: CENTER_Y, rot: -10 + Math.random() * 20, scale: 1.3, config: { friction: 50, tension: 800 }, delay: 0 };
+          return { x: CENTER_X, y: CENTER_Y, rot: -10 + Math.random() * 20, scale: 1.3, config: { friction: 50, tension: 450 }, delay: 0 };
         }
       }
       return props[i];
@@ -119,9 +123,9 @@ const DeckProject = ({
           <div>
             <a href={items[i].link} target="_blank" rel="noopener noreferrer" className={items[i].centered ? '' : 'disabled'}>
               {items[i].id === 'projects' && items[i].centered ? (
-                <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '-0.2px' }} />
+                <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '-0.2px' }} className='github_logo' />
               ) : (
-                items[i].id === 'projects' ? <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '15px' }} /> : <></>
+                items[i].id === 'projects' ? <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '15px' }} className='github_logo' /> : <></>
               )}
             </a>
             {items[i].image !== '' ? <img src={items[i].image} alt="" style={items[i].styles} /> : <></>}
@@ -132,11 +136,11 @@ const DeckProject = ({
             {items[i].title === 'My Links' ?
               <div>
                 <a href="https://github.com/Jai0212" target="_blank" rel="noopener noreferrer" className={items[i].centered ? '' : 'disabled'}>
-                  <img src={assets.github_logo} alt="GitHub Link" style={{ width: '80px', marginTop: '10px' }} />
+                  <img src={assets.github_logo} alt="GitHub Link" style={{ width: '87px', marginTop: '10px' }} className='github_logo_aboutMe'/>
                 </a>
                 <br />
                 <a href="https://www.linkedin.com/in/jai-joshi-872726234/" target="_blank" rel="noopener noreferrer" className={items[i].centered ? '' : 'disabled'}>
-                  <img src={assets.linkedin_logo} alt="LinkedIn Link" style={{ width: '120px' }} />
+                  <img src={assets.linkedin_logo} alt="LinkedIn Link" style={{ width: '130px' }} />
                 </a>
                 <br />
                 <a href="mailto:jj.joshijai@gmail.com" target="_blank" rel="noopener noreferrer" className={items[i].centered ? '' : 'disabled'}>
