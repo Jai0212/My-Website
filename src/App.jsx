@@ -270,7 +270,7 @@ const App = () => {
     }));
 
     setItems(updatedItems);
-  }, []);
+  }, [center_x, center_y]);
 
   return (
     <div className="app">
