@@ -54,7 +54,7 @@ body {
     border: none;
     padding: 20px 40px;
     border-radius: 10px;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
     text-align: center;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
@@ -63,9 +63,8 @@ body {
 }
 
 .header:hover {
-    transform: translate(-50%, -50%) scale(1.05); /* Scale up on hover */
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6); /* Increase glow on hover */
-    cursor: pointer; /* Pointer cursor on hover */
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
 }
 
 

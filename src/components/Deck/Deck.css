@@ -110,7 +110,6 @@
 .card-project.projects:hover,
 .card-center.projects:hover {
   box-shadow: 0 0 20px rgba(127, 255, 0, 0.9);
-  /* Brighten shadow on hover */
 }
 
 .card-project.internships,
@@ -124,7 +123,6 @@
 .card-project.internships:hover,
 .card-center.internships:hover {
   box-shadow: 0 0 20px rgba(255, 77, 77, 0.9);
-  /* Brighten shadow on hover */
 }
 
 .card-project.aboutMe,
@@ -138,7 +136,6 @@
 .card-project.aboutMe:hover,
 .card-center.aboutMe:hover {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-  /* Brighten shadow on hover */
 }
 
 .card-project.tools,
@@ -146,14 +143,12 @@
   background-color: #1a2c37;
   color: #ffffff;
   box-shadow: 0 0 12px rgba(74, 175, 204, 0.7);
-  /* Light blue glow effect */
   transition: box-shadow 0.3s ease;
 }
 
 .card-project.tools:hover,
 .card-center.tools:hover {
   box-shadow: 0 0 20px rgba(74, 175, 204, 0.9);
-  /* Brighten shadow on hover */
 }
 
 
@@ -176,11 +171,6 @@
 .card-center.center {
   background-color: white;
 }
-
-/* .description,
-.title {
-  color: black;
-} */
 
 
 .disabled {
