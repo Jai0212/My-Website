@@ -43,6 +43,11 @@ import name_text_black from './name_text_black.png';
 import card_sound from './card_sound.m4a';
 import uoft_logo from './uoft_logo.jpg'
 import background from './background.jpeg';
+import vue from './vue.png';
+import kotlin from './kotlin.png';
+import firebase from './firebase.png';
+import android from './android.png';
+
 
 export const assets = {
     github_logo,
@@ -89,5 +94,9 @@ export const assets = {
     name_text,
     name_text_black,
     card_sound,
-    background
+    background,
+    vue,
+    kotlin,
+    firebase,
+    android
 }

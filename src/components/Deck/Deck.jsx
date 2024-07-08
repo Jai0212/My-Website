@@ -28,6 +28,7 @@ const DeckProject = ({
     assets.c_hash,
     assets.html,
     assets.css,
+    assets.kotlin,
     assets.ts,
     assets.sql,
   ];
@@ -43,21 +44,23 @@ const DeckProject = ({
     assets.express,
     assets.flask,
     assets.mongodb,
-    assets.react,
+    assets.firebase,
     assets.matlab,
   ];
 
-  const libraries_images = [
+  const dependencies_images = [
     assets.opencv,
     assets.tensorflow,
     assets.pytorch,
+    assets.react,
     assets.langchain,
     assets.vite,
     assets.numpy,
     assets.stripe,
     assets.matplotlib,
-    assets.pandas,
     assets.opengl,
+    assets.pandas,
+    assets.vue,
   ];
 
   const playSound = () => {
@@ -160,9 +163,9 @@ const DeckProject = ({
                   <img key={index} src={image} alt="" className="image-item" />
                 ))}
               </div> : <></>}
-            {items[i].title === 'Libraries' ?
+            {items[i].title === 'Dependencies' ?
               <div className="image-grid">
-                {libraries_images.map((image, index) => (
+                {dependencies_images.map((image, index) => (
                   <img key={index} src={image} alt="" className="image-item" />
                 ))}
               </div> : <></>}

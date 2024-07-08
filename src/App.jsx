@@ -172,7 +172,7 @@ const itemsData = [
   },
   {
     id: 'tools',
-    title: 'Libraries',
+    title: 'Dependencies',
     description: '',
     image: '',
     styles: {}
