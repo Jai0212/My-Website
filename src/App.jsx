@@ -49,7 +49,7 @@ const itemsData = [
     description: `
     - Developed an Android app to easily organize meetups with friends in Kotlin
     - Integrated with Firebase Realtime Database for seamless meetup organization and data management
-    - Implemented features including user authentication, friend management, and customizable profiles to enhance user experience`,
+    - Implemented features including real-time chat, user authentication, friend management, and customizable profiles to enhance user experience`,
     link: 'https://github.com/Jai0212/Meetup-Mate',
     styles: {},
     image: ''
