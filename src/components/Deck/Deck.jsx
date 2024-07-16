@@ -2,6 +2,7 @@ import React from 'react'
 import { useSprings, animated, interpolate } from 'react-spring'
 import './Deck.css'
 import { assets } from '../../assets/assets'
+import LogoName from '../LogoName/LogoName'
 
 const from = (i) => ({
   x: 0 + Math.random() * 10, rot: 0, scale: 1.5, y: -1000
@@ -19,48 +20,48 @@ const DeckProject = ({
   CENTER_Y
 }) => {
 
-  const languages_images = [
-    assets.python,
-    assets.java,
-    assets.js,
-    assets.c,
-    assets.c_plus,
-    assets.c_hash,
-    assets.html,
-    assets.css,
-    assets.kotlin,
-    assets.ts,
-    assets.sql,
+  const languages = [
+    { src: assets.python, name: 'Python' },
+    { src: assets.java, name: 'Java' },
+    { src: assets.js, name: 'JavaScript' },
+    { src: assets.c, name: 'C' },
+    { src: assets.c_plus, name: 'C++' },
+    { src: assets.kotlin, name: 'Kotlin' },
+    { src: assets.html, name: 'HTML' },
+    { src: assets.css, name: 'CSS' },
+    { src: assets.ts, name: 'TypeScript' },
+    // { src: assets.sql, name: 'SQL' },
   ];
 
-  const tools_images = [
-    assets.aws,
-    assets.azure,
-    assets.gcp,
-    assets.docker,
-    assets.kubernetes,
-    assets.git,
-    assets.node,
-    assets.express,
-    assets.flask,
-    assets.mongodb,
-    assets.firebase,
-    assets.matlab,
+  const tools = [
+    { src: assets.aws, name: 'AWS' },
+    { src: assets.azure, name: 'Azure' },
+    { src: assets.gcp, name: 'GCP' },
+    // { src: assets.docker, name: 'Docker' },
+    // { src: assets.kubernetes, name: 'Kubernetes' },
+    { src: assets.firebase, name: 'Firebase' },
+    { src: assets.mongodb, name: 'MongoDB' },
+    { src: assets.postgresql, name: 'PostgreSQL' },
+    { src: assets.node, name: 'Node.js' },
+    { src: assets.express, name: 'Express' },
+    { src: assets.flask, name: 'Flask' },
+    { src: assets.git, name: 'Git' },
+    { src: assets.matlab, name: 'MATLAB' },
   ];
 
-  const dependencies_images = [
-    assets.opencv,
-    assets.tensorflow,
-    assets.pytorch,
-    assets.react,
-    assets.langchain,
-    assets.vite,
-    assets.numpy,
-    assets.stripe,
-    assets.matplotlib,
-    assets.opengl,
-    assets.pandas,
-    assets.vue,
+  const dependencies = [
+    { src: assets.opencv, name: 'OpenCV' },
+    { src: assets.tensorflow, name: 'TensorFlow' },
+    { src: assets.pytorch, name: 'PyTorch' },
+    { src: assets.react, name: 'React' },
+    { src: assets.vue, name: 'Vue.js' },
+    { src: assets.vite, name: 'Vite' },
+    { src: assets.langchain, name: 'LangChain' },
+    { src: assets.numpy, name: 'NumPy' },
+    { src: assets.opengl, name: 'OpenGL' },
+    { src: assets.stripe, name: 'Stripe' },
+    { src: assets.pandas, name: 'Pandas' },
+    { src: assets.matplotlib, name: 'Matplotlib' },
   ];
 
   const playSound = () => {
@@ -139,7 +140,7 @@ const DeckProject = ({
             {items[i].title === 'My Links' ?
               <div>
                 <a href="https://github.com/Jai0212" target="_blank" rel="noopener noreferrer" className={items[i].centered ? '' : 'disabled'}>
-                  <img src={assets.github_logo} alt="GitHub Link" style={{ width: '87px', marginTop: '10px' }} className='github_logo_aboutMe'/>
+                  <img src={assets.github_logo} alt="GitHub Link" style={{ width: '87px', marginTop: '10px' }} className='github_logo_aboutMe' />
                 </a>
                 <br />
                 <a href="https://www.linkedin.com/in/jai-joshi-872726234/" target="_blank" rel="noopener noreferrer" className={items[i].centered ? '' : 'disabled'}>
@@ -153,20 +154,35 @@ const DeckProject = ({
               <></>}
             {items[i].title === 'Languages' ?
               <div className="image-grid">
-                {languages_images.map((image, index) => (
-                  <img key={index} src={image} alt="" className="image-item" />
+                {languages.map((item, index) => (
+                  <LogoName
+                    key={index}
+                    logoSrc={item.src}
+                    logoName={item.name}
+                    isCentered={items[i].centered}
+                  />
                 ))}
               </div> : <></>}
             {items[i].title === 'Tools' ?
               <div className="image-grid">
-                {tools_images.map((image, index) => (
-                  <img key={index} src={image} alt="" className="image-item" />
+                {tools.map((item, index) => (
+                  <LogoName
+                    key={index}
+                    logoSrc={item.src}
+                    logoName={item.name}
+                    isCentered={items[i].centered}
+                  />
                 ))}
               </div> : <></>}
             {items[i].title === 'Dependencies' ?
               <div className="image-grid">
-                {dependencies_images.map((image, index) => (
-                  <img key={index} src={image} alt="" className="image-item" />
+                {dependencies.map((item, index) => (
+                  <LogoName
+                    key={index}
+                    logoSrc={item.src}
+                    logoName={item.name}
+                    isCentered={items[i].centered}
+                  />
                 ))}
               </div> : <></>}
           </div>

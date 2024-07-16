@@ -47,7 +47,8 @@ import vue from './vue.png';
 import kotlin from './kotlin.png';
 import firebase from './firebase.png';
 import android from './android.png';
-
+import postgresql from './postgresql.svg';
+import mysql from './mysql.png';
 
 export const assets = {
     github_logo,
@@ -98,5 +99,7 @@ export const assets = {
     vue,
     kotlin,
     firebase,
-    android
+    android,
+    postgresql,
+    mysql
 }
