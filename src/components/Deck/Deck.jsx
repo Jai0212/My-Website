@@ -42,6 +42,7 @@ const DeckProject = ({
     { src: assets.firebase, name: 'Firebase' },
     { src: assets.mongodb, name: 'MongoDB' },
     { src: assets.postgresql, name: 'PostgreSQL' },
+    { src: assets.chromadb, name: 'ChromaDB' },
     { src: assets.node, name: 'Node.js' },
     { src: assets.express, name: 'Express' },
     { src: assets.flask, name: 'Flask' },

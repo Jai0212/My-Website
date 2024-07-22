@@ -49,6 +49,7 @@ import firebase from './firebase.png';
 import android from './android.png';
 import postgresql from './postgresql.svg';
 import mysql from './mysql.png';
+import chromadb from './chromadb.png'
 
 export const assets = {
     github_logo,
@@ -101,5 +102,6 @@ export const assets = {
     firebase,
     android,
     postgresql,
-    mysql
+    mysql,
+    chromadb
 }
