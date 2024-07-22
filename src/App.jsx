@@ -93,13 +93,25 @@ const itemsData = [
   },
   {
     id: 'projects',
-    title: 'Dog Breed Identifier CNN ',
+    title: 'Dog Breed Identifier CNN',
     display: 'Python, Neural Networks, Deep Learning, TensorFlow, NumPy, OpenCV, SciPy, Matplotlib',
     description: `
     - Developed a custom convolutional neural network (image recognition) from scratch that identifies the breed of a dog among 120 dog breeds
     - Achieved a testing accuracy of ∼98% with a 5-layered neural network architecture trained on over 20,000 images
     - Executed with proficiency in cutting edge technologies using TensorFlow, NumPy and OpenCV in Python`,
     link: 'https://github.com/Jai0212/Dog-Breed-Identifier-CNN',
+    styles: {},
+    image: ''
+  },
+  {
+    id: 'projects',
+    title: 'SecureAuthAI - npm Package',
+    display: 'Python, JavaScript, Node.js, PostgreSQL, Flask, Machine Learning ',
+    description: `
+    - Published an npm package for advanced sign-in security with AI-based risk assessment, MFA and user management
+    - Integrated real-time PostgreSQL management and anomaly detection, supporting React, Vue, and Angular frameworks
+    - Provided pre-made functions for automating database and user management, eliminating the need for API calls`,
+    link: 'https://github.com/Jai0212/secure-auth-ai',
     styles: {},
     image: ''
   },
@@ -135,7 +147,7 @@ const itemsData = [
   {
     id: 'aboutMe',
     title: 'Extras',
-    description: 'Currently learning <strong>app development</strong>\n\nFounder of <strong>The Green Cycle Drive and Clean the Coast</strong> - one of Dubai\'s largest environmental organizations\n\nDesigned an attachable product to prevent chairs from rocking. Wrote a <strong>research paper titled Anti-Chair Rocking Device</strong> on the device which was published in an international journal. ',
+    description: 'Currently learning <strong>game development</strong>\n\nFounder of <strong>The Green Cycle Drive and Clean the Coast</strong> - one of Dubai\'s largest environmental organizations\n\nDesigned an attachable product to prevent chairs from rocking. Wrote a <strong>research paper titled Anti-Chair Rocking Device</strong> on the device which was published in an international journal. ',
     image: '',
     styles: {}
   },
