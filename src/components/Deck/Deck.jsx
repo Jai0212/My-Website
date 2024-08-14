@@ -30,7 +30,8 @@ const DeckProject = ({
     { src: assets.html, name: 'HTML' },
     { src: assets.css, name: 'CSS' },
     { src: assets.ts, name: 'TypeScript' },
-    // { src: assets.sql, name: 'SQL' },
+    { src: assets.sql, name: 'SQL' },
+    { src: assets.r, name: 'R' },
   ];
 
   const tools = [

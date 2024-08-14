@@ -71,9 +71,9 @@ const itemsData = [
     title: 'Chore Hero - Full-Stack Web Application',
     display: 'React, Vite, Node.js, Express.js, MongoDB, Stripe, JWT, Netlify',
     description: `
-    - Developed a full-stack web application to order services such as carpentry, cleaning, etc. using Vite/React and Node.js
-    - Designed responsive interfaces for clients and admins with a MongoDB database to store log-in, cart and order details
-    - Implemented secure authentication with JWT and payment processing with Stripe API
+    - Developed a full-stack web application to order services such as carpentry, cleaning, etc. using the MERN stack
+    - Created responsive client and admin interfaces, implemented secure JWT authentication and Stripe API for payment
+    - Designed and implemented RESTful APIs to handle CRUD operations for service management and user interactions
 `,
     link: 'https://github.com/Jai0212/Chore-Hero',
     styles: {},
@@ -84,9 +84,9 @@ const itemsData = [
     title: 'AI Chess Engine',
     display: 'Java, MiniMax algorithm, Alpha-Beta pruning, Object-Oriented Programming, JFrame, Java Swing',
     description: `
-    - Developed a chess game/engine using MiniMax algorithm with alpha-beta pruning, optimized for depth up to 10.
-    - Created an interactive GUI supporting human-vs-human and human-vs-computer modes with full chess functionality (en passant, promotions, castling, stalemate).
-    - Improved user experience with customizable chessboard features, flipping, and adjustable AI difficulty.`,
+    - Developed a chess game/engine using MiniMax algorithm with alpha-beta pruning, optimized for depth up to 10
+    - Created an interactive GUI supporting human-vs-human and human-vs-computer modes with full chess functionality (en passant, promotions, castling, stalemate)
+    - Improved user experience with customizable chessboard features, flipping, and adjustable AI difficulty`,
     link: 'https://github.com/Jai0212/AI-Chess-Engine',
     styles: {},
     image: ''
@@ -96,7 +96,7 @@ const itemsData = [
     title: 'Dog Breed Identifier CNN',
     display: 'Python, Neural Networks, Deep Learning, TensorFlow, NumPy, OpenCV, SciPy, Matplotlib',
     description: `
-    - Developed a custom convolutional neural network (image recognition) from scratch that identifies the breed of a dog among 120 dog breeds
+    - Developed a custom convolutional neural network (image recognition) that identifies the breed of a dog among 120 dog breeds
     - Achieved a testing accuracy of ∼98% with a 5-layered neural network architecture trained on over 20,000 images
     - Executed with proficiency in cutting edge technologies using TensorFlow, NumPy and OpenCV in Python`,
     link: 'https://github.com/Jai0212/Dog-Breed-Identifier-CNN',
@@ -129,14 +129,23 @@ const itemsData = [
   {
     id: 'internships',
     title: 'AI & Data Intern',
-    display: 'e& enterprise\nMay 24 - Present\nDubai',
+    display: 'e& enterprise\nMay 24 - Aug 24\nDubai',
     description: `
-    - Developed a RAG based LLM for Tax Information Retrieval in Python
-    - Implemented using LangChain and ChromaDB
-    - Utilized Ollama embedding functions to enable the LLM to retrieve relevant tax information with a frontend built using React, TypeScript, Python and Flask`,
+    - Developed a RAG LLM for tax information retrieval using LangChain, ChromaDB, and Ollama embeddings, while exploring RAG vs fine-tuning and self-hosting LLMs
+    - Created a dynamic HR LLM with Python, Vue.js, and PostgreSQL for automating policy queries and leave applications
+    - Built a Python tool with ResNet50 CNN and LimeWire API for logo generation and similarity scoring`,
     image: assets.eand_logo,
     styles: { width: '170px', borderRadius: '10px', border: '3px solid red' }
   },
+  // {
+  //   id: 'internships',
+  //   title: 'Software Developer and Researcher',
+  //   display: 'Intelligent Adaptive Interventions Lab\n\nSep 24 - Present\nToronto',
+  //   description: `
+  //   - Enhancing & Personalizing Technology for Education & Health by Integrating Human-Computer Interaction, Psychology, Statistics & Large Language Models`,
+  //   image: assets.iai,
+  //   styles: { width: '90px', borderRadius: '10px', border: '3px solid red' }
+  // },
   {
     id: 'aboutMe',
     title: 'My Links',

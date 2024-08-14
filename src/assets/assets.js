@@ -50,6 +50,8 @@ import android from './android.png';
 import postgresql from './postgresql.svg';
 import mysql from './mysql.png';
 import chromadb from './chromadb.png'
+import r from './r.svg.png'
+import iai from './iai.jpeg'
 
 export const assets = {
     github_logo,
@@ -103,5 +105,7 @@ export const assets = {
     android,
     postgresql,
     mysql,
-    chromadb
+    chromadb,
+    r,
+    iai
 }
