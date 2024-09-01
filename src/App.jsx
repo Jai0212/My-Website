@@ -137,15 +137,15 @@ const itemsData = [
     image: assets.eand_logo,
     styles: { width: '170px', borderRadius: '10px', border: '3px solid red' }
   },
-  // {
-  //   id: 'internships',
-  //   title: 'Software Developer and Researcher',
-  //   display: 'Intelligent Adaptive Interventions Lab\n\nSep 24 - Present\nToronto',
-  //   description: `
-  //   - Enhancing & Personalizing Technology for Education & Health by Integrating Human-Computer Interaction, Psychology, Statistics & Large Language Models`,
-  //   image: assets.iai,
-  //   styles: { width: '90px', borderRadius: '10px', border: '3px solid red' }
-  // },
+  {
+    id: 'internships',
+    title: 'Software Developer and Researcher',
+    display: 'Intelligent Adaptive Interventions Lab\n\nSep 24 - Present\nToronto',
+    description: `
+    - Enhancing & Personalizing Technology for Education & Health by Integrating Human-Computer Interaction, Psychology, Statistics & Large Language Models`,
+    image: assets.iai,
+    styles: { width: '90px', borderRadius: '10px', border: '3px solid red' }
+  },
   {
     id: 'aboutMe',
     title: 'My Links',
@@ -156,7 +156,9 @@ const itemsData = [
   {
     id: 'aboutMe',
     title: 'Extras',
-    description: 'Currently learning <strong>game development</strong>\n\nFounder of <strong>The Green Cycle Drive and Clean the Coast</strong> - one of Dubai\'s largest environmental organizations\n\nDesigned an attachable product to prevent chairs from rocking. Wrote a <strong>research paper titled Anti-Chair Rocking Device</strong> on the device which was published in an international journal. ',
+    description: `Currently learning <strong>game development</strong>\n
+    Led a team to design an attachable product to prevent chairs from rocking. Wrote a <strong>research paper titled 'Anti-Chair Rocking Device'</strong> on the device which was published in an international journal <strong>(IJIRMF)</strong>\n
+    Founder of <strong>The Green Cycle Drive and Clean the Coast</strong> - one of Dubai's largest environmental organizations`,
     image: '',
     styles: {}
   },
