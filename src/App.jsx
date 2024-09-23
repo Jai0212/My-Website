@@ -117,7 +117,7 @@ const itemsData = [
   },
   {
     id: 'internships',
-    title: 'Cloud & Cybersecurity Intern',
+    title: 'Cloud Engineer Intern',
     display: 'Intertec\nJul 22 - Aug 22\nDubai',
     description: `
     - Researched SaaS backup needs for Office 365 and Google Suite, evaluating available backup options
@@ -128,23 +128,44 @@ const itemsData = [
   },
   {
     id: 'internships',
+    title: 'Backend Engineer Intern',
+    display: 'CouBon\nSep 23 - Dec 24\nToronto',
+    description: `
+    - Created a dashboard in the Angular web app using Firebase and TypeScript for managing digital coupons
+    - Optimized backend performance by 35% using Node.js through asynchronous programming, query optimization, and 
+    REST API refinement, improving efficiency of coupon transactions`,
+    image: assets.coubon_logo,
+    styles: { width: '80px', borderRadius: '10px', border: '3px solid red' }
+  },
+  {
+    id: 'internships',
     title: 'AI & Data Intern',
     display: 'e& enterprise\nMay 24 - Aug 24\nDubai',
     description: `
     - Developed a RAG LLM for tax information retrieval using LangChain, ChromaDB, and Ollama embeddings, while exploring RAG vs fine-tuning and self-hosting LLMs
-    - Created a dynamic HR LLM with Python, Vue.js, and PostgreSQL for automating policy queries and leave applications
-    - Built a Python tool with ResNet50 CNN and LimeWire API for logo generation and similarity scoring`,
+    - Created a dynamic HR LLM with Python, Vue.js, and PostgreSQL for automating policy queries and leave applications`,
     image: assets.eand_logo,
     styles: { width: '170px', borderRadius: '10px', border: '3px solid red' }
+  },
+  {
+    id: 'internships',
+    title: 'Machine Learning Engineer Intern',
+    display: 'Smart Mate\nSep 24 - Present\nToronto',
+    description: `
+    - Developed a convolutional neural network (CNN) for sign language recognition in Python using MediaPipe and OpenCV, to improve accessibility for the hearing-impaired
+    - Implemented video-to-text pipelines using LLMs to enhance query interpretation and generate conversational responses`,
+    image: assets.smart_mate_logo,
+    styles: { width: '100px', borderRadius: '10px', border: '3px solid red' }
   },
   {
     id: 'internships',
     title: 'Software Developer and Researcher',
     display: 'Intelligent Adaptive Interventions Lab\n\nSep 24 - Present\nToronto',
     description: `
-    - Enhancing & Personalizing Technology for Education & Health by Integrating Human-Computer Interaction, Psychology, Statistics & Large Language Models`,
+    - Developing an Android app using Kotlin and Firebase to reduce impulsive app usage by 50% through behavior modifying techniques and by making distracting apps less appealing
+    - Researching digital well-being strategies to reduce screen time by 40%, enhancing productivity and mental health`,
     image: assets.iai,
-    styles: { width: '90px', borderRadius: '10px', border: '3px solid red' }
+    styles: { width: '80px', borderRadius: '10px', border: '3px solid red', marginBottom: '-0.000000001px' }
   },
   {
     id: 'aboutMe',
