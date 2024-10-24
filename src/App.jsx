@@ -132,8 +132,7 @@ const itemsData = [
     display: 'CouBon\nSep 23 - Dec 24\nToronto',
     description: `
     - Created a dashboard in the Angular web app using Firebase and TypeScript for managing digital coupons
-    - Optimized backend performance by 35% using Node.js through asynchronous programming, query optimization, and 
-    REST API refinement, improving efficiency of coupon transactions`,
+    - Optimized backend performance by 35% using Node.js through asynchronous programming, query optimization, and REST API refinement, improving efficiency of coupon transactions`,
     image: assets.coubon_logo,
     styles: { width: '80px', borderRadius: '10px', border: '3px solid red' }
   },
@@ -152,20 +151,22 @@ const itemsData = [
     title: 'Machine Learning Engineer Intern',
     display: 'Smart Mate\nSep 24 - Present\nToronto',
     description: `
-    - Developed a convolutional neural network (CNN) for sign language recognition in Python using MediaPipe and OpenCV, to improve accessibility for the hearing-impaired
-    - Implemented video-to-text pipelines using LLMs to enhance query interpretation and generate conversational responses`,
+    - Developed a CNN-LSTM model for sign language recognition using MediaPipe and SURF for key point detection, improving accessibility for the hearing-impaired
+    - Implemented video-to-text pipelines using Kalman filter for movement prediction and NLP models, including BERT, to improve query interpretation and conversational response
+    `,
     image: assets.smart_mate_logo,
-    styles: { width: '100px', borderRadius: '10px', border: '3px solid red' }
+    styles: { width: '80px', borderRadius: '10px', border: '3px solid red' }
   },
   {
     id: 'internships',
     title: 'Software Developer and Researcher',
     display: 'Intelligent Adaptive Interventions Lab\n\nSep 24 - Present\nToronto',
     description: `
-    - Developing an Android app using Kotlin and Firebase to reduce impulsive app usage by 50% through behavior modifying techniques and by making distracting apps less appealing
-    - Researching digital well-being strategies to reduce screen time by 40%, enhancing productivity and mental health`,
+    - Led a team to develop an Android app using Kotlin and Firebase, applying HCI principles to reduce impulsive app usage through behavior-modifying techniques like breathing exercises and interactive tasks
+    - Researched digital well-being strategies, leveraging UI/UX design to reduce screen time boosting mental health
+    `,
     image: assets.iai,
-    styles: { width: '80px', borderRadius: '10px', border: '3px solid red', marginBottom: '-0.000000001px' }
+    styles: { width: '76px', borderRadius: '10px', border: '3px solid red', marginBottom: '-0.000000001px' }
   },
   {
     id: 'aboutMe',

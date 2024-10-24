@@ -24,7 +24,7 @@ const DeckProject = ({
     { src: assets.python, name: 'Python' },
     { src: assets.java, name: 'Java' },
     { src: assets.js, name: 'JavaScript' },
-    { src: assets.c, name: 'C' },
+    // { src: assets.c, name: 'C' },
     { src: assets.c_plus, name: 'C++' },
     { src: assets.kotlin, name: 'Kotlin' },
     { src: assets.html, name: 'HTML' },
