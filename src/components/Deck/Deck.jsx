@@ -140,7 +140,7 @@ const DeckProject = ({
             <h2>{items[i].title}</h2>
             {items[i].id === "internships" || items[i].id === "projects" ? <p dangerouslySetInnerHTML={{ __html: items[i].display.replace(/\n/g, '<br>') }} style={{ fontStyle: 'italic', marginBottom: '-10px' }} /> : <></>}
             {items[i].id === "tools" || items[i].id === "aboutMe" || (items[i].id === "projects" && items[i].centered && isNotMobile) || (items[i].id === "internships" && items[i].centered && isNotMobile) ?
-              <p dangerouslySetInnerHTML={{ __html: items[i].description.replace(/\n/g, '<br>') }} style={{fontSize: isNotMobile && items[i].className != 'about-me-description' ? '14px' : '10px'}}/>: <></>}
+              <p dangerouslySetInnerHTML={{ __html: items[i].description.replace(/\n/g, '<br>') }} style={{ fontSize: isNotMobile && items[i].className !== 'about-me-description' ? '14px' : '10px' }} /> : <></>}
             {items[i].title === 'My Links' ?
               <div>
                 <a href="https://github.com/Jai0212" target="_blank" rel="noopener noreferrer" className={items[i].centered && isNotMobile ? '' : 'disabled'}>

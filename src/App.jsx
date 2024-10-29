@@ -186,7 +186,7 @@ const itemsData = [
     styles: {},
     className: 'about-me-description'
   },
-  { 
+  {
     id: 'aboutMe',
     title: '2nd Year at UofT',
     description: 'Computer Science Speicalist\nStats & Math Minor\n\nGPA: 3.93',
