@@ -44,6 +44,9 @@
 
   transition: all 0.15s;
   cursor: pointer;
+
+  /* overflow: auto; */
+  box-sizing: border-box;
 }
 
 .card-project h2,
@@ -190,3 +193,11 @@
   height: auto;
   object-fit: cover;
 }
+
+/* @media( max-width: 768px) {
+  .card-project,
+  .card-center {
+    width: 30vw;
+    height: 40vh;
+  }
+} */

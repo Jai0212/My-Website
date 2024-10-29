@@ -15,6 +15,7 @@ body {
         sans-serif;
     background-color: #121212;
     overflow-x: hidden;
+    /* overflow-y: hidden; */
 }
 
 body {
@@ -45,9 +46,11 @@ body {
 .header {
     font-size: 55px;
     position: absolute;
-    top: 62%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* top: 56%; */
+    /* left: 50%; */
+    /* top: calc(50vh + 50px); */
+    /* left: calc(50vw - 50px); */
+    /* transform: translate(-50%, -50%); */
     margin: 0;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.7);
@@ -63,12 +66,10 @@ body {
 }
 
 .header:hover {
-    transform: translate(-50%, -50%) scale(1.05);
+    transform: scale(1.05);
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
 }
 
-
-    /* font-family: 'Arial', sans-serif; */
 
 /* .header {
     font-size: 55px;
@@ -108,11 +109,53 @@ body {
     width: 320px;
 } */
 
-/* @media (max-width: 1600px) {
+/* @media (min-width: 2561px) {
+    .header {
+        left: 28%;
+        top: 58%;
+    }
+}
+
+@media (max-width: 2560px) {
+    .header {
+        left: 29%;
+        top: 58%;
+    }
+}
+
+@media (max-width: 2400px) {
+    .header {
+        top: 58%;
+        left: 31%;
+    }
+}
+
+@media (max-width: 2300px) {
+    .header {
+        top: 58%;
+        left: 32%;
+    }
+}
+
+@media (max-width: 1920px) {
+    .header {
+        left: 38%;
+        top: 57%;
+    }
+}
+
+@media (max-width: 1800px) {
+    .header {
+        left: 41%;
+        top: 57%;
+    }
+}
+
+@media (max-width: 1600px) {
     .header {
         left: 45%;
     }
-} */
+}
 
 @media (max-width: 1400px) {
     body,
@@ -165,4 +208,4 @@ body {
     .header {
         left: 180%;
     }
-}
+} */

@@ -3,7 +3,6 @@ import './index.css';
 import Deck from './components/Deck/Deck';
 import { useState } from 'react';
 import { assets } from './assets/assets.js';
-import { useMediaQuery } from 'react-responsive';
 
 const itemsData = [
   {
@@ -255,55 +254,115 @@ const App = () => {
   const [cardOnTop, setCardOnTop] = useState([]);
   const [items, setItems] = useState([]);
 
-  const isMax = useMediaQuery({ query: '(max-width: 1400px)' });
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1254px)' });
-  const isBetween = useMediaQuery({ query: '(max-width: 1100px)' });
-  const isBeforeAfterBetween = useMediaQuery({ query: '(max-width: 1025px)' });
-  const isAfterBetween = useMediaQuery({ query: '(max-width: 900px)' });
-  const isIPad = useMediaQuery({ query: '(max-width: 850px)' });
-  const isMobile = useMediaQuery({ query: '(max-width: 769px)' });
-  const isSmallMobile = useMediaQuery({ query: '(max-width: 500px)' });
+  // Change index.css for center Jai Joshi, this is only for cards in center placement
 
-  let center_x = isMobile ? 180 : isTabletOrMobile ? -50 : -150;
-  let center_y = isMobile ? -370 : isTabletOrMobile ? -380 : -330;
+  // const isMax = useMediaQuery({ query: '(min-width: 2561px)' });
+  // const isMax2560 = useMediaQuery({ query: '(max-width: 2560px)' });
+  // const isMax2400 = useMediaQuery({ query: '(max-width: 2400px)' });
+  // const isMax2200 = useMediaQuery({ query: '(max-width: 2200px)' });
+  // const isMax1920 = useMediaQuery({ query: '(max-width: 1920px)' });
+  // const isMax1800 = useMediaQuery({ query: '(max-width: 1800px)' });
+  // const isMax1600 = useMediaQuery({ query: '(max-width: 1600px)' });
+  // const isMax1400 = useMediaQuery({ query: '(max-width: 1400px)' });
+  // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1254px)' });
+  // const isBetween = useMediaQuery({ query: '(max-width: 1100px)' });
+  // const isBeforeAfterBetween = useMediaQuery({ query: '(max-width: 1025px)' });
+  // const isAfterBetween = useMediaQuery({ query: '(max-width: 900px)' });
+  // const isIPad = useMediaQuery({ query: '(max-width: 850px)' });
+  // const isMobile = useMediaQuery({ query: '(max-width: 769px)' });
+  // const isSmallMobile = useMediaQuery({ query: '(max-width: 500px)' });
 
-  if (isMax && !isTabletOrMobile) {
-    center_x = -50;
-  }
+  // let center_x = isMobile ? 180 : isTabletOrMobile ? -50 : -150;
+  // let center_y = isMobile ? -370 : isTabletOrMobile ? -380 : -330;
 
-  if (isBetween && !isMobile) {
-    center_x = 50;
-    center_y = -350;
-  }
+  // if (isMax) {
+  //   center_x = -730;
+  //   center_y = -700;
+  // }
 
-  if (isBeforeAfterBetween && !isAfterBetween) {
-    center_y = -250;
-  }
+  // if (isMax2560) {
+  //   center_x = -660;
+  //   center_y = -680;
+  // }
 
-  if (isAfterBetween && !isIPad) {
-    center_x = 150;
-    center_y = -500;
-  }
+  // if (isMax2400) {
+  //   center_x = -600;
+  //   center_y = -680;
+  // }
 
-  if (isIPad && !isMobile) {
-    center_x = 150;
-    center_y = -450;
-  }
+  // if (isMax2200) {
+  //   center_x = -500;
+  //   center_y = -680;
+  // }
 
-  if (isSmallMobile) {
-    center_x = 360;
-    center_y = -300;
-  }
+  // if (isMax1920) {
+  //   center_x = -370;
+  //   center_y = -700;
+  // }
+
+  // if (isMax1800) {
+  //   center_x = -300;
+  //   center_y = -700;
+  // }
+
+  // if (isMax1600) {
+  //   center_x = -200;
+  //   center_y = -600;
+  // }
+
+  // if (isMax1400 && !isTabletOrMobile) {
+  //   center_x = -50;
+  // }
+
+  // if (isBetween && !isMobile) {
+  //   center_x = 50;
+  //   center_y = -350;
+  // }
+
+  // if (isBeforeAfterBetween && !isAfterBetween) {
+  //   center_y = -250;
+  // }
+
+  // if (isAfterBetween && !isIPad) {
+  //   center_x = 150;
+  //   center_y = -500;
+  // }
+
+  // if (isIPad && !isMobile) {
+  //   center_x = 150;
+  //   center_y = -450;
+  // }
+
+  // if (isSmallMobile) {
+  //   center_x = 360;
+  //   center_y = -300;
+  // }
+
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+
+  const offsetX = 160;
+  const offsetY = -150;
+
+  const top_left = { x: -screenWidth / 2 + offsetX, y: -screenHeight / 2 + offsetY }
+  const top_right = { x: screenWidth / 4, y: top_left.y }
+  const bottom_left = { x: top_left.x, y: top_left.y + 510 }
+
+  const center_x = (top_left.x + top_right.x) / 2;
+  const center_y = (top_left.y + bottom_left.y) / 2;
+  // console.log(center_x, center_y);
+  // console.log(screenWidth, screenHeight);
 
   React.useEffect(() => {
     const calculatePosition = (id) => {
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      const offsetX = 160;
+
+      const offsetX = 140;
       const offsetY = -150;
 
       const top_left = { x: -screenWidth / 2 + offsetX, y: -screenHeight / 2 + offsetY }
-      const top_right = { x: top_left.x + 820, y: top_left.y }
+      const top_right = { x: screenWidth / 4, y: top_left.y }
       const bottom_left = { x: top_left.x, y: top_left.y + 510 }
       const bottom_right = { x: top_right.x, y: bottom_left.y }
 
@@ -332,7 +391,8 @@ const App = () => {
   return (
     <div className="app">
       <div className='header-div'>
-        <h1 className="header">Jai Joshi</h1>
+      {/* screenHeight / 2 + 120, left: (screenWidth / 2) + 500/screenWidth */}
+        <h1 className="header" style={{left: ((screenWidth / 3) + (screenWidth / 2)) / 2, top: screenHeight / 1.8}}>Jai Joshi</h1>
         {/* <img src={assets.name_text} alt=""/> */}
       </div>
       <div className="container">

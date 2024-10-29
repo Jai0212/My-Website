@@ -126,7 +126,7 @@ const DeckProject = ({
             marginLeft: margin_left,
             marginRight: margin_right
           }}>
-          <div>
+          <div className='card-content'>
             <a href={items[i].link} target="_blank" rel="noopener noreferrer" className={items[i].centered ? '' : 'disabled'}>
               {items[i].id === 'projects' && items[i].centered ? (
                 <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '-0.2px' }} className='github_logo' />
