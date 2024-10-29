@@ -42,3 +42,13 @@
 .logo-container.hover-effect:hover .logo-image {
     transform: scale(1.05);
 }
+
+@media(max-width: 767px) {
+    .logo-image {
+        width: 100%;
+    }
+    
+    .logo-container {
+        margin-top: -14px;
+    }
+}

@@ -20,6 +20,8 @@ const DeckProject = ({
   CENTER_Y
 }) => {
 
+  const isNotMobile = window.innerWidth >= 768;
+
   const languages = [
     { src: assets.python, name: 'Python' },
     { src: assets.java, name: 'Java' },
@@ -134,23 +136,23 @@ const DeckProject = ({
                 items[i].id === 'projects' ? <img src={assets.github_logo} alt="GitHub Link" style={{ marginBottom: '15px' }} className='github_logo' /> : <></>
               )}
             </a>
-            {items[i].image !== '' ? <img src={items[i].image} alt="" style={items[i].styles} /> : <></>}
+            {items[i].image !== '' ? <img src={items[i].image} alt="" style={items[i].styles} className={items[i].className} /> : <></>}
             <h2>{items[i].title}</h2>
             {items[i].id === "internships" || items[i].id === "projects" ? <p dangerouslySetInnerHTML={{ __html: items[i].display.replace(/\n/g, '<br>') }} style={{ fontStyle: 'italic', marginBottom: '-10px' }} /> : <></>}
-            {items[i].id === "tools" || items[i].id === "aboutMe" || (items[i].id === "projects" && items[i].centered) || (items[i].id === "internships" && items[i].centered) ?
-              <p dangerouslySetInnerHTML={{ __html: items[i].description.replace(/\n/g, '<br>') }} /> : <></>}
+            {items[i].id === "tools" || items[i].id === "aboutMe" || (items[i].id === "projects" && items[i].centered && isNotMobile) || (items[i].id === "internships" && items[i].centered && isNotMobile) ?
+              <p dangerouslySetInnerHTML={{ __html: items[i].description.replace(/\n/g, '<br>') }} style={{fontSize: isNotMobile && items[i].className != 'about-me-description' ? '14px' : '10px'}}/>: <></>}
             {items[i].title === 'My Links' ?
               <div>
-                <a href="https://github.com/Jai0212" target="_blank" rel="noopener noreferrer" className={items[i].centered ? '' : 'disabled'}>
-                  <img src={assets.github_logo} alt="GitHub Link" style={{ width: '87px', marginTop: '10px' }} className='github_logo_aboutMe' />
+                <a href="https://github.com/Jai0212" target="_blank" rel="noopener noreferrer" className={items[i].centered && isNotMobile ? '' : 'disabled'}>
+                  <img src={assets.github_logo} alt="GitHub Link" style={{ width: '87px', marginTop: '10px' }} className='github-logo-aboutMe my-links-images' />
                 </a>
                 <br />
-                <a href="https://www.linkedin.com/in/jai-joshi-872726234/" target="_blank" rel="noopener noreferrer" className={items[i].centered ? '' : 'disabled'}>
-                  <img src={assets.linkedin_logo} alt="LinkedIn Link" style={{ width: '130px' }} />
+                <a href="https://www.linkedin.com/in/jai-joshi-872726234/" target="_blank" rel="noopener noreferrer" className={items[i].centered && isNotMobile ? '' : 'disabled'}>
+                  <img src={assets.linkedin_logo} alt="LinkedIn Link" style={{ width: '130px' }} className='linkedIn-logo-aboutMe my-links-images' />
                 </a>
                 <br />
-                <a href="mailto:jj.joshijai@gmail.com" target="_blank" rel="noopener noreferrer" className={items[i].centered ? '' : 'disabled'}>
-                  <img src={assets.email_logo} alt="Email" style={{ width: '90px' }} />
+                <a href="mailto:jj.joshijai@gmail.com" target="_blank" rel="noopener noreferrer" className={items[i].centered && isNotMobile ? '' : 'disabled'}>
+                  <img src={assets.email_logo} alt="Email" style={{ width: '90px' }} className='email-logo-aboutMe my-links-images' />
                 </a>
               </div> :
               <></>}
@@ -161,7 +163,7 @@ const DeckProject = ({
                     key={index}
                     logoSrc={item.src}
                     logoName={item.name}
-                    isCentered={items[i].centered}
+                    isCentered={items[i].centered && isNotMobile}
                   />
                 ))}
               </div> : <></>}
@@ -172,7 +174,7 @@ const DeckProject = ({
                     key={index}
                     logoSrc={item.src}
                     logoName={item.name}
-                    isCentered={items[i].centered}
+                    isCentered={items[i].centered && isNotMobile}
                   />
                 ))}
               </div> : <></>}
@@ -183,7 +185,7 @@ const DeckProject = ({
                     key={index}
                     logoSrc={item.src}
                     logoName={item.name}
-                    isCentered={items[i].centered}
+                    isCentered={items[i].centered && isNotMobile}
                   />
                 ))}
               </div> : <></>}

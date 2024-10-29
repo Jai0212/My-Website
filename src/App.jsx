@@ -3,6 +3,7 @@ import './index.css';
 import Deck from './components/Deck/Deck';
 import { useState } from 'react';
 import { assets } from './assets/assets.js';
+// import { useMediaQuery } from 'react-responsive';
 
 const itemsData = [
   {
@@ -143,7 +144,8 @@ const itemsData = [
     - Developed a RAG LLM for tax information retrieval using LangChain, ChromaDB, and Ollama embeddings, while exploring RAG vs fine-tuning and self-hosting LLMs
     - Created a dynamic HR LLM with Python, Vue.js, and PostgreSQL for automating policy queries and leave applications`,
     image: assets.eand_logo,
-    styles: { width: '170px', borderRadius: '10px', border: '3px solid red' }
+    styles: { width: '170px', borderRadius: '10px', border: '3px solid red' },
+    className: 'eand-image'
   },
   {
     id: 'internships',
@@ -181,41 +183,46 @@ const itemsData = [
     Led a team to design an attachable product to prevent chairs from rocking. Wrote a <strong>research paper titled 'Anti-Chair Rocking Device'</strong> on the device which was published in an international journal <strong>(IJIRMF)</strong>\n
     Founder of <strong>The Green Cycle Drive and Clean the Coast</strong> - one of Dubai's largest environmental organizations`,
     image: '',
-    styles: {}
+    styles: {},
+    className: 'about-me-description'
   },
-  {
+  { 
     id: 'aboutMe',
     title: '2nd Year at UofT',
     description: 'Computer Science Speicalist\nStats & Math Minor\n\nGPA: 3.93',
     image: assets.uoft_logo,
-    styles: { width: '210px', marginTop: '-100px', marginBottom: '30px', backgroundColor: 'white', border: '4px solid #004080', borderRadius: '10px', boxShadow: '0px 0px 25px 0px #004080' }
+    styles: { width: '210px', marginTop: '-100px', marginBottom: '30px', backgroundColor: 'white', border: '4px solid #004080', borderRadius: '10px', boxShadow: '0px 0px 25px 0px #004080' },
+    className: 'uoft-image'
   },
   {
     id: 'aboutMe',
     title: 'Jai Joshi',
     description: 'About Me',
     image: assets.jj_pic,
-    styles: { width: '220px', height: '370px', borderRadius: '10px', border: '4px solid #004080', boxShadow: '0px 0px 30px 0px #004080' }
+    styles: { width: '220px', height: '370px', borderRadius: '10px', border: '4px solid #004080', boxShadow: '0px 0px 30px 0px #004080' },
+    className: 'about-me-image'
   },
   {
     id: 'tools',
     title: 'Google Garage Digital Marketing',
     description: `
-    - Understanding key concepts like digital marketing strategies, customer journeys, and the role of analytics
+    - Understanding digital marketing strategies, customer journeys and analytics
     - Search Engine Optimization and social media marketing
-    - Exploring the principles of online advertising, including pay-per-click (PPC) campaigns, targeting options, and ad performance metrics.`,
+    - Explored online advertising, including pay-per-click (PPC) campaigns, targeting options, and ad performance metrics`,
     image: assets.google,
-    styles: { width: '150px' }
+    styles: { width: '150px' },
+    className: 'google-courses-image'
   },
   {
     id: 'tools',
     title: 'Harvard CS50x',
     description: `
-    - Learn about algorithms and data structures
+    - Learnt about algorithms and data structures
     - Gained proficiency in programming languages such as C, Python, JavaScript and web-development.
     - Problem-solving skills and algorithmic thinking for tackling complex coding challenges`,
     image: assets.harvard,
-    styles: { width: '230px', marginBottom: '40px', backgroundColor: 'white', borderRadius: '10px', border: '4px solid #004080', boxShadow: '0px 0px 20px 0px #004080' }
+    styles: { width: '230px', marginBottom: '40px', backgroundColor: 'white', borderRadius: '10px', border: '4px solid #004080', boxShadow: '0px 0px 20px 0px #004080' },
+    className: 'harvard-courses-image'
   },
   {
     id: 'tools',
@@ -224,7 +231,8 @@ const itemsData = [
     - Basics of cloud computing and AWS services
     - Best practices for security, scalability, and optimization`,
     image: assets.aws,
-    styles: { width: '150px' }
+    styles: { width: '150px' },
+    className: 'aws-courses-image'
   },
   {
     id: 'tools',
@@ -254,6 +262,9 @@ const App = () => {
   const [cardOnTop, setCardOnTop] = useState([]);
   const [items, setItems] = useState([]);
 
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+
   // Change index.css for center Jai Joshi, this is only for cards in center placement
 
   // const isMax = useMediaQuery({ query: '(min-width: 2561px)' });
@@ -269,112 +280,29 @@ const App = () => {
   // const isBeforeAfterBetween = useMediaQuery({ query: '(max-width: 1025px)' });
   // const isAfterBetween = useMediaQuery({ query: '(max-width: 900px)' });
   // const isIPad = useMediaQuery({ query: '(max-width: 850px)' });
-  // const isMobile = useMediaQuery({ query: '(max-width: 769px)' });
-  // const isSmallMobile = useMediaQuery({ query: '(max-width: 500px)' });
 
-  // let center_x = isMobile ? 180 : isTabletOrMobile ? -50 : -150;
-  // let center_y = isMobile ? -370 : isTabletOrMobile ? -380 : -330;
+  const positions = calculatePositions(160, -150);
 
-  // if (isMax) {
-  //   center_x = -730;
-  //   center_y = -700;
-  // }
+  const center_x = (positions.top_left.x + positions.top_right.x) / 2;
+  const center_y = (positions.top_left.y + positions.bottom_left.y) / 2;
 
-  // if (isMax2560) {
-  //   center_x = -660;
-  //   center_y = -680;
-  // }
-
-  // if (isMax2400) {
-  //   center_x = -600;
-  //   center_y = -680;
-  // }
-
-  // if (isMax2200) {
-  //   center_x = -500;
-  //   center_y = -680;
-  // }
-
-  // if (isMax1920) {
-  //   center_x = -370;
-  //   center_y = -700;
-  // }
-
-  // if (isMax1800) {
-  //   center_x = -300;
-  //   center_y = -700;
-  // }
-
-  // if (isMax1600) {
-  //   center_x = -200;
-  //   center_y = -600;
-  // }
-
-  // if (isMax1400 && !isTabletOrMobile) {
-  //   center_x = -50;
-  // }
-
-  // if (isBetween && !isMobile) {
-  //   center_x = 50;
-  //   center_y = -350;
-  // }
-
-  // if (isBeforeAfterBetween && !isAfterBetween) {
-  //   center_y = -250;
-  // }
-
-  // if (isAfterBetween && !isIPad) {
-  //   center_x = 150;
-  //   center_y = -500;
-  // }
-
-  // if (isIPad && !isMobile) {
-  //   center_x = 150;
-  //   center_y = -450;
-  // }
-
-  // if (isSmallMobile) {
-  //   center_x = 360;
-  //   center_y = -300;
-  // }
-
-  const screenWidth = window.innerWidth;
-  const screenHeight = window.innerHeight;
-
-  const offsetX = 160;
-  const offsetY = -150;
-
-  const top_left = { x: -screenWidth / 2 + offsetX, y: -screenHeight / 2 + offsetY }
-  const top_right = { x: screenWidth / 4, y: top_left.y }
-  const bottom_left = { x: top_left.x, y: top_left.y + 510 }
-
-  const center_x = (top_left.x + top_right.x) / 2;
-  const center_y = (top_left.y + bottom_left.y) / 2;
   // console.log(center_x, center_y);
   // console.log(screenWidth, screenHeight);
 
   React.useEffect(() => {
     const calculatePosition = (id) => {
-      const screenWidth = window.innerWidth;
-      const screenHeight = window.innerHeight;
 
-      const offsetX = 140;
-      const offsetY = -150;
-
-      const top_left = { x: -screenWidth / 2 + offsetX, y: -screenHeight / 2 + offsetY }
-      const top_right = { x: screenWidth / 4, y: top_left.y }
-      const bottom_left = { x: top_left.x, y: top_left.y + 510 }
-      const bottom_right = { x: top_right.x, y: bottom_left.y }
+      const positions = calculatePositions(140, -150);
 
       switch (id) {
         case 'projects':
-          return { x: top_left.x, y: top_left.y, z: 1, centered: false }; // Top-left
+          return { x: positions.top_left.x, y: positions.top_left.y, z: 1, centered: false }; // Top-left
         case 'aboutMe':
-          return { x: bottom_left.x, y: bottom_left.y, z: 1, centered: false }; // Top-right
+          return { x: positions.bottom_left.x, y: positions.bottom_left.y, z: 1, centered: false }; // Top-right
         case 'internships':
-          return { x: top_right.x, y: top_right.y, z: 1, centered: false }; // Bottom-left
+          return { x: positions.top_right.x, y: positions.top_right.y, z: 1, centered: false }; // Bottom-left
         case 'tools':
-          return { x: bottom_right.x, y: bottom_right.y, z: 1, centered: false }; // Bottom-right
+          return { x: positions.bottom_right.x, y: positions.bottom_right.y, z: 1, centered: false }; // Bottom-right
         default:
           return { x: center_x, y: center_y, z: 0.5, centered: true };
       }
@@ -391,8 +319,8 @@ const App = () => {
   return (
     <div className="app">
       <div className='header-div'>
-      {/* screenHeight / 2 + 120, left: (screenWidth / 2) + 500/screenWidth */}
-        <h1 className="header" style={{left: ((screenWidth / 3) + (screenWidth / 2)) / 2, top: screenHeight / 1.8}}>Jai Joshi</h1>
+        {/* screenHeight / 2 + 120, left: (screenWidth / 2) + 500/screenWidth */}
+        <h1 className="header" style={{ left: ((screenWidth / 3) + (screenWidth / 2)) / 2, top: screenHeight / 1.8 }}>Jai Joshi</h1>
         {/* <img src={assets.name_text} alt=""/> */}
       </div>
       <div className="container">
@@ -415,5 +343,24 @@ const App = () => {
     </div>
   )
 }
+
+const calculatePositions = (offsetX, offsetY) => {
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+
+  let top_left = { x: -screenWidth / 2 + offsetX, y: -screenHeight / 2 + offsetY };
+  let top_right = { x: screenWidth / 4, y: top_left.y };
+  let bottom_left = { x: top_left.x, y: top_left.y + 510 };
+  let bottom_right = { x: top_right.x, y: bottom_left.y };
+
+  if (screenWidth <= 767) { // Mobile
+    top_left = { x: -screenWidth / 2, y: -screenHeight / 1.3 };
+    top_right = { x: screenWidth / 17, y: top_left.y };
+    bottom_left = { x: top_left.x, y: top_left.y + 450 };
+    bottom_right = { x: top_right.x, y: bottom_left.y };
+  }
+
+  return { top_left, top_right, bottom_left, bottom_right };
+};
 
 export default App;
