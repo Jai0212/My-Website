@@ -54,6 +54,7 @@ import r from './r.svg.png'
 import iai from './iai.jpeg'
 import coubon_logo from './coubon_logo.jpeg'
 import smart_mate_logo from './smart_mate_logo.jpeg'
+import background_video from './background_video.mp4'
 
 export const assets = {
     github_logo,
@@ -111,5 +112,6 @@ export const assets = {
     r,
     iai,
     coubon_logo,
-    smart_mate_logo
+    smart_mate_logo,
+    background_video,
 }

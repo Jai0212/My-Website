@@ -86,6 +86,21 @@ const DeckProject = ({
     config: { tension: 75, friction: 12 } // animation speed
   }));
 
+  const [breathProps, setBreath] = useSprings(items.length, (i) => ({
+    scale: 1, // Initial scale
+    config: { tension: 30, friction: 5 }, // Breathing speed
+  }));
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setBreath((i) => ({
+        scale: breathProps[i].scale.get() === 1 ? 1.08 : 1, // Toggle between 1 and 1.1
+      }));
+    }, 100); // Change the interval for breathing effect as needed
+
+    return () => clearInterval(interval);
+  }, [setBreath, breathProps]);
+
   const moveCard = (index) => {
     set((i) => {
       if (index === i) {
@@ -118,12 +133,12 @@ const DeckProject = ({
           className={items[i].centered ? `card-center ${items[i].id}` : `card-project ${items[i].id}`}
           onClick={() => moveCard(i)}
           style={{
-            transform:
-              x && y && rot && scale ?
-                interpolate([x, y, rot, scale], (x, y, rot, scale) => {
-                  return `translate3d(${x}px,${y}px,0) rotateX(30deg) rotateY(${rot / 10}deg) rotateZ(${rot}deg) scale(${scale})`
-                })
-                : undefined,
+            transform: interpolate(
+              [x, y, rot, scale, breathProps[i].scale],
+              (x, y, rot, scale, breathScale) => {
+                return `translate3d(${x}px, ${y}px, 0) rotateX(30deg) rotateY(${rot / 10}deg) rotateZ(${rot}deg) scale(${scale * breathScale})`;
+              }
+            ),
             zIndex: items[i].z,
             marginLeft: margin_left,
             marginRight: margin_right
@@ -140,7 +155,7 @@ const DeckProject = ({
             <h2>{items[i].title}</h2>
             {items[i].id === "internships" || items[i].id === "projects" ? <p dangerouslySetInnerHTML={{ __html: items[i].display.replace(/\n/g, '<br>') }} style={{ fontStyle: 'italic', marginBottom: '-10px' }} /> : <></>}
             {items[i].id === "tools" || items[i].id === "aboutMe" || (items[i].id === "projects" && items[i].centered && isNotMobile) || (items[i].id === "internships" && items[i].centered && isNotMobile) ?
-              <p dangerouslySetInnerHTML={{ __html: items[i].description.replace(/\n/g, '<br>') }} style={{ fontSize: isNotMobile && items[i].className !== 'about-me-description' ? '14px' : '10px' }} /> : <></>}
+              <p dangerouslySetInnerHTML={{ __html: items[i].description.replace(/\n/g, '<br>') }} style={{ fontSize: !isNotMobile && items[i].className == 'about-me-description' ? '10px' : '14px' }} /> : <></>}
             {items[i].title === 'My Links' ?
               <div>
                 <a href="https://github.com/Jai0212" target="_blank" rel="noopener noreferrer" className={items[i].centered && isNotMobile ? '' : 'disabled'}>

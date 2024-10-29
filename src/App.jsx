@@ -4,6 +4,7 @@ import Deck from './components/Deck/Deck';
 import { useState } from 'react';
 import { assets } from './assets/assets.js';
 // import { useMediaQuery } from 'react-responsive';
+import BackgroundVideo from './components/BackgroundVideo/BackgroundVideo.jsx';
 
 const itemsData = [
   {
@@ -281,7 +282,7 @@ const App = () => {
   // const isAfterBetween = useMediaQuery({ query: '(max-width: 900px)' });
   // const isIPad = useMediaQuery({ query: '(max-width: 850px)' });
 
-  const positions = calculatePositions(160, -150);
+  const positions = calculatePositions(100, -150);
 
   const center_x = (positions.top_left.x + positions.top_right.x) / 2;
   const center_y = (positions.top_left.y + positions.bottom_left.y) / 2;
@@ -292,7 +293,7 @@ const App = () => {
   React.useEffect(() => {
     const calculatePosition = (id) => {
 
-      const positions = calculatePositions(140, -150);
+      const positions = calculatePositions(80, -150);
 
       switch (id) {
         case 'projects':
@@ -318,10 +319,13 @@ const App = () => {
 
   return (
     <div className="app">
+
+      <BackgroundVideo />
+
       <div className='header-div'>
         {/* screenHeight / 2 + 120, left: (screenWidth / 2) + 500/screenWidth */}
         <h1 className="header" style={{
-          left: screenWidth > 767 ? ((screenWidth / 3) + (screenWidth / 2)) / 2 :
+          left: screenWidth > 767 ? ((screenWidth / 3.2) + (screenWidth / 2)) / 2 :
             (screenWidth / 3.4), top: screenHeight / 1.8
         }}>Jai Joshi</h1>
         {/* <img src={assets.name_text} alt=""/> */}
