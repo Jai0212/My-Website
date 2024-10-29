@@ -72,9 +72,10 @@ body {
 
 @media(max-width: 767px) {
     .header {
+        visibility: hidden;
         font-size: 20px;
-        left: 30% !important;
-        top: 46% !important;
+        /* left: 30% !important; */
+        /* top: 46% !important; */
     }
 }
 
@@ -85,8 +86,7 @@ body {
     }
 } */
 
-@media only screen and (min-width: 768px) and (max-width: 830px) and (orientation: portrait) {
-
+@media only screen and (min-width: 768px) and (max-width: 830px){
     html,
     body {
         overflow: auto;

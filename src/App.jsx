@@ -320,7 +320,10 @@ const App = () => {
     <div className="app">
       <div className='header-div'>
         {/* screenHeight / 2 + 120, left: (screenWidth / 2) + 500/screenWidth */}
-        <h1 className="header" style={{ left: ((screenWidth / 3) + (screenWidth / 2)) / 2, top: screenHeight / 1.8 }}>Jai Joshi</h1>
+        <h1 className="header" style={{
+          left: screenWidth > 767 ? ((screenWidth / 3) + (screenWidth / 2)) / 2 :
+            (screenWidth / 3.4), top: screenHeight / 1.8
+        }}>Jai Joshi</h1>
         {/* <img src={assets.name_text} alt=""/> */}
       </div>
       <div className="container">
